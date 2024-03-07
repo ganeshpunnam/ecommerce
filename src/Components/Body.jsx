@@ -7,10 +7,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Body.css';
 import { useNavigate } from 'react-router-dom';
 
-const Body = ({ getdata,  productsData1,addToCartProduct }) => {
+const Body = ({ getdata, productsData1, Method }) => {
     const navigate = useNavigate();
-   
-    
 
     const settings = {
         dots: true,
@@ -46,15 +44,11 @@ const Body = ({ getdata,  productsData1,addToCartProduct }) => {
     );
 
     const dataToShow = getdata === '' ? productsData1 : filterData;
-    
+
     const handleAddToCart = (product) => {
-        addToCartProduct(product);
-        alert("Item added to cart");
+        console.log("Adding product to cart:", product);
+        Method(product); // Update cart state
     };
-    
-
-
-    
 
     return (
         <div className="body">
@@ -82,8 +76,7 @@ const Body = ({ getdata,  productsData1,addToCartProduct }) => {
                             <h3 className="card-title">{product.name}</h3>
                             <p className="card-description">{product.description}</p>
                             <p className="card-price">${product.price}</p>
-                         
-                            <button className="add-to-cart-btn" onClick={handleAddToCart} >Add to Cart</button>
+                            <button className="add-to-cart-btn" onClick={() => handleAddToCart(product)}>Add to Cart</button>
                         </div>
                     </div>
                 ))}
