@@ -104,7 +104,7 @@ const Register = () => {
           required
         />
       </div>
-      <button type="submit" className="btn-submit">Submit</button>
+      <button onClick={() => navigate('/')} type="submit" className="btn-submit">Submit</button>
       <button onClick={() => navigate('/')} type="button" className="btn-submit">Login</button>
     </form>
   );
