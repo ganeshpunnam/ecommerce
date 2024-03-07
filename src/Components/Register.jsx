@@ -39,6 +39,7 @@ const Register = () => {
   setPassword("");
   setConfirmPassword("");
   setSelectedImage(null);
+ navigate('/')
 };
 
 
@@ -104,7 +105,7 @@ const Register = () => {
           required
         />
       </div>
-      <button onClick={() => navigate('/')} type="submit" className="btn-submit">Submit</button>
+      <button  type="submit" className="btn-submit">Submit</button>
       <button onClick={() => navigate('/')} type="button" className="btn-submit">Login</button>
     </form>
   );
