@@ -1,0 +1,37 @@
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+  .inputContainer {
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .button2 {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #d9a112;
+    margin-top: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  

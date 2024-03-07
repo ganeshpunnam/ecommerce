@@ -1,0 +1,68 @@
+.profile-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.61);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+    padding: 20px;
+    width:300px;
+    height: fit-content;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding box shadow for depth */
+}
+.main{
+
+  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem
+}
+#d{
+    height: fit-content;
+    color: white;
+    background-color: black;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #ccc; /* Adding border to the profile image */
+}
+
+.q {
+    display: flex;
+    align-items: center;
+    column-gap: 15px; /* Adjusting gap between elements */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-info > .q {
+    margin-bottom: 10px;
+ /* Adding border to each profile info section */
+    padding-bottom: 10px; /* Adding padding at the bottom for separation */
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 0;
+}
+p{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(41, 5, 198);
+}
