@@ -48,6 +48,7 @@ const Body = ({ getdata, productsData1, Method }) => {
     const handleAddToCart = (product) => {
         console.log("Adding product to cart:", product);
         Method(product); // Update cart state
+        alert("Iteam add Successfully😊 ")
     };
 
     return (

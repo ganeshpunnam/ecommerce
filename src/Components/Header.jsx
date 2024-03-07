@@ -27,8 +27,9 @@ const Header = ({setdata}) => {
                     </ul>
                 </nav>
                 <div className="user-section">
+                    <div className="user">
                     <span className="user-name">Welcome, {name1}</span>
-                   
+                    </div>
               <img
                 src={imgURL}
                 alt="Profile Picture" onClick={()=> navigate('/profile')}

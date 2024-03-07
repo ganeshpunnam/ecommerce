@@ -47,4 +47,12 @@
   .add-to-cart-item .add-to-cart-btn:hover {
     background-color: #0056b3;
   }
+  select{
+    width: 60px;
+  }
+  .selects{
+    display: flex;
+    column-gap: 15x;
+    align-items: center;
+  }
   
