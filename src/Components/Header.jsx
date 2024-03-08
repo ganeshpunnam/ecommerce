@@ -12,6 +12,7 @@ const Header = ({setdata}) => {
  const sreachHandel= (event)=>{
     const inputValue = event.target.value;
     setdata(inputValue);
+    console.log(inputValue)
 }
 
     return (

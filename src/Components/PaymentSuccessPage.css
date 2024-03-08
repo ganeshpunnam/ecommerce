@@ -1,0 +1,50 @@
+.payment-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.payment-success-card {
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.payment-success-title {
+    color: #28a745;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.payment-success-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.payment-success-icon {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.payment-success-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment-success-btn:hover {
+    background-color: #0056b3;
+}
+.su{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
