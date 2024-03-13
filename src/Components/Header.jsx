@@ -19,7 +19,7 @@ const Header = ({setdata}) => {
         <header className="header">
             <div className="header-container">
                 <h1 className="logo">Ganesh App</h1>
-                <input onChange={sreachHandel}/>
+                <input id='inputHeader' placeholder='Enter the product name' onChange={sreachHandel}/>
                 <nav className="nav">
                     <ul className="nav-list">
                         <li className="nav-item"><a href="/" className="nav-link">Home</a></li>

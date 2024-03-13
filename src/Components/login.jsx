@@ -5,13 +5,12 @@ import Cookies from "js-cookie";
 
 const Login = () => {
   const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setpassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (event) => {
     event.preventDefault();
 
-    // Retrieve stored name and password from cookies
     const storedName = Cookies.get("name");
     const storedPassword = Cookies.get("password");
 
@@ -48,7 +47,7 @@ const Login = () => {
             className="input"
             type="password"
             value={password}
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={(event) => setpassword(event.target.value)}
             placeholder="Enter password"
             required
           />

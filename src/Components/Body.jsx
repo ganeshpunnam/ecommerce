@@ -47,7 +47,7 @@ const Body = ({ getdata, productsData1, Method }) => {
 
     const handleAddToCart = (product) => {
         console.log("Adding product to cart:", product);
-        Method(product); // Update cart state
+        Method(product); 
         alert("Iteam add Successfully😊 ")
         
     };
@@ -73,7 +73,7 @@ const Body = ({ getdata, productsData1, Method }) => {
             <div className="card-container">
                 {dataToShow.map(product => (
                     <div key={product.id} className="card">
-                        <img src={product.image} alt={product.name} className="card-image" />
+                        <img id='image-card' src={product.image} alt={product.name} className="card-image" />
                         <div className="card-details">
                             <h3 className="card-title">{product.name}</h3>
                             <p className="card-description">{product.description}</p>

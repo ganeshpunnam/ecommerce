@@ -9,13 +9,14 @@ import Method2 from './Components/Fetchdata';
 import TodoName from './Components/Todo/Todomain';
 import Todo2 from './Components/Todo/Todo2';
 import Todofinal from './Components/Todo/TodoFinal';
+import Testing from './Components/Testing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
     <App />
-  
+  {/* <Testing/> */}
     {/* <h1>App Design</h1> */}
     {/* <Cheek1/> */}
    {/* <Method2/>

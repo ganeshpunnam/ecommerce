@@ -4,27 +4,31 @@ import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 function AddtoCart({ data }) {
-    const [quantity, setQuantity] = useState(1);
+    const [quantities, setQuantities] = useState({});
     const navigate = useNavigate();
     const [totalAmount, setTotalAmount] = useState(0);
     Cookies.set('amount', totalAmount, { expires: 7 });
 
-    const handleQuantityChange = (event) => {
-        setQuantity(parseInt(event.target.value));
+    const handleQuantityChange = (event, productId) => {
+        const { value } = event.target;
+        setQuantities(prevState => ({
+            ...prevState,
+            [productId]: parseInt(value)
+        }));
     };
 
     const calculateTotalAmount = () => {
         let total = 0;
         data.forEach(item => {
+            const quantity = quantities[item.id] || 0;
             total += item.price * quantity;
         });
         return total;
     };
 
-  
     useEffect(() => {
         setTotalAmount(calculateTotalAmount());
-    }, [data, quantity]);
+    }, [data, quantities]);
 
     return (
         <div>
@@ -40,7 +44,7 @@ function AddtoCart({ data }) {
                             <div className='selects'>
                                 <p>
                                     Quantity
-                                    <select value={quantity} onChange={handleQuantityChange}>
+                                    <select value={quantities[item.id] || 1} onChange={(event) => handleQuantityChange(event, item.id)}>
                                         <option value={1}>1</option>
                                         <option value={2}>2</option>
                                         <option value={3}>3</option>
@@ -48,7 +52,7 @@ function AddtoCart({ data }) {
                                         <option value={5}>5</option>
                                     </select>
                                 </p>
-                                <p>Total: ${item.price * quantity}</p>
+                                <p>Total: ${item.price * (quantities[item.id] || 1)}</p>
                             </div>
                         </div>
                     </div>
